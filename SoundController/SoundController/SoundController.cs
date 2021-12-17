@@ -7,23 +7,23 @@
     using UnityEngine;
 
     [Serializable]
-    public class AC_Sound
+    public class Sound_Members
     {
         public string name;
         public AudioClip audioClip;
 
-        public AC_Sound(string _name, AudioClip _audioClip)
+        public Sound_Members(string _name, AudioClip _audioClip)
         {
             name = _name;
             audioClip = _audioClip;
         }
     }
 
-    public class AC_SoundController : MonoBehaviour
+    public class SoundController : MonoBehaviour
     {
         #region 사운드 컨트롤러
 
-        public static AC_SoundController instance;
+        public static SoundController instance;
 
         private void Awake()
         {
@@ -43,8 +43,8 @@
             }
         }
 
-        [SerializeField] public AC_Sound[] common_clips;
-        [SerializeField] public List<AC_Sound> act_clips = new List<AC_Sound>();
+        [SerializeField] public Sound_Members[] common_clips;
+        [SerializeField] public List<Sound_Members> act_clips = new List<Sound_Members>();
         public AudioSource BGM;
         public AudioSource Narration;
         [SerializeField] public List<AudioSource> Effects = new List<AudioSource>();
@@ -55,8 +55,7 @@
 
         public void SoundControll(string name, SoundAct soundAct = SoundAct.Play)
         {
-            AudioSource target = Etc; // 임시 처리
-                                      // 효과음인지 확인
+            AudioSource target = Etc; 
             bool isEffect = false;
             bool isNarr = false;
 
@@ -76,7 +75,6 @@
                 {
                     target = Narration;
 
-                    // 나레이션 정책 확인 (나레이션 재생할 때만)
                     isNarr = true;
                 }
                 else if (sound.name.Contains("Eff"))
@@ -102,7 +100,6 @@
                 }
                 else if (name.Contains("Narr"))
                 {
-                    // UIController에서 공통으로 나레이션 제어할 때 사용
                     target = Narration;
                 }
                 else if (name.Contains("Eff"))
@@ -294,7 +291,7 @@
                 return;
             }
 
-            act_clips.Add(new AC_Sound(name, clip));
+            act_clips.Add(new Sound_Members(name, clip));
         }
         // 오디오 클립 길이 반환
         public float GetDuration(string name)
@@ -306,7 +303,7 @@
 
             return sound.audioClip.length;
         }
-        public AC_Sound FindClip(string name)
+        public Sound_Members FindClip(string name)
         {
             var sound = act_clips.Find(x => x.name == name);
             if (sound == null) return null;
