@@ -1,9 +1,0 @@
-D:\Github\SoundController\SoundController\SoundController\bin\Release\SoundController.dll
-D:\Github\SoundController\SoundController\SoundController\bin\Release\SoundController.pdb
-D:\Github\SoundController\SoundController\SoundController\bin\Release\DOTween.dll
-D:\Github\SoundController\SoundController\SoundController\bin\Release\UnityEngine.dll
-D:\Github\SoundController\SoundController\SoundController\obj\Release\SoundController.csprojAssemblyReference.cache
-D:\Github\SoundController\SoundController\SoundController\obj\Release\SoundController.csproj.CoreCompileInputs.cache
-D:\Github\SoundController\SoundController\SoundController\obj\Release\SoundController.csproj.CopyComplete
-D:\Github\SoundController\SoundController\SoundController\obj\Release\SoundController.dll
-D:\Github\SoundController\SoundController\SoundController\obj\Release\SoundController.pdb
