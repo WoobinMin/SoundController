@@ -20,7 +20,7 @@
 4. 실행 시 Common_Clips에 있는 Clip들이 Act_Clips으로 넘어옴
 
 ### Script
-1. 스크립트에 ``` Using DFP;```를 추가
+1. ``` Using DFP;```를 추가
 2. ``` SoundController.instance.SoundControll("사운드이름") ```을 통해 사운드 재생
 3. ``` SoundController.instance.GetDuration("사운드이름") ```을 통해 사운드 재생 길이를 return
 4. ``` SoundController.instance.FindClip("사운드이름") ```을 통해 Act_Clips에 있는 Clip을 return
