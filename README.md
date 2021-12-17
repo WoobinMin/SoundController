@@ -17,10 +17,13 @@
     > **Eff_Name** : 이펙트사운드로 동시에 여러 소리가 나올 수 있음
     > 
     > **Narr_Name** : 한 번에 한개의 Narr 사운드만 재생됨(이전의 것을 강제 종료)
+4. 실행 시 Common_Clips에 있는 Clip들이 Act_Clips으로 넘어옴
 
 ### Script
 1. 스크립트에 ``` Using DFP;```를 추가
 2. ``` SoundController.instance.SoundControll("사운드이름") ```을 통해 사운드 재생
+3. ``` SoundController.instance.GetDuration("사운드이름") ```을 통해 사운드 재생 길이를 return
+4. ``` SoundController.instance.FindClip("사운드이름") ```을 통해 Act_Clips에 있는 Clip을 return
 
 ## 주의 사항
 Common_Clips과 Act_Clips의 사운드 명이 겹칠 경우 Act_Clips의 사운드가 우선적으로 실행됨
