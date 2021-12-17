@@ -13,7 +13,7 @@
     Eff_Name : 이펙트사운드로 동시에 여러 소리가 나올 수 있음
     Narr_Name : 한 번에 한개의 Narr 사운드만 재생됨(이전의 것을 강제 종료)
 6. Single Ton 패턴으로 원하는 스크립트에서 Using DFP를 추가
-7. SoundController.instance.SoundControll("사운드이름")을 통해 사운드 재생
+7. ```c#SoundController.instance.SoundControll("사운드이름")```을 통해 사운드 재생
 
 ## 주의 사항
 Common_Clips과 Act_Clips의 사운드 명이 겹칠 경우 Act_Clips의 사운드가 우선적으로 실행됨
