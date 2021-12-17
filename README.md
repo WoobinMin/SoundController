@@ -8,6 +8,7 @@
 2. 올라와있는 Package를 Import
 
 ## 사용 방법 (Inspector)
+### Prefab Setting
 1. 자주사용하는 사운드의 경우 Common_clips에 추가 후 프리팹 저장
 2. 각 씬마다 다르게 사용하는 경우 Act_Clips에 추가
 3. 각 사운드의 네이밍은 아래와 같은 규칙으로 사용 (Name 부분에 원하는 이름 삽입)
@@ -16,8 +17,10 @@
     > **Eff_Name** : 이펙트사운드로 동시에 여러 소리가 나올 수 있음
     > 
     > **Narr_Name** : 한 번에 한개의 Narr 사운드만 재생됨(이전의 것을 강제 종료)
-4. Single Ton 패턴으로 원하는 스크립트에서 Using DFP를 추가
-5. ``` SoundController.instance.SoundControll("사운드이름") ```을 통해 사운드 재생
+
+### Script
+1. 스크립트에 ``` Using DFP;```를 추가
+2. ``` SoundController.instance.SoundControll("사운드이름") ```을 통해 사운드 재생
 
 ## 주의 사항
 Common_Clips과 Act_Clips의 사운드 명이 겹칠 경우 Act_Clips의 사운드가 우선적으로 실행됨
